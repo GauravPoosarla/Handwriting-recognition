@@ -32,9 +32,11 @@ model = Sequential()
 model.add(Conv2D(32, kernel_size=(5, 5),activation='relu',input_shape=input_shape))
 #Adding a pooling layer with a kernel of 3 x 3.
 model.add(MaxPooling2D(pool_size=(3, 3)))
+
 #Adding the second convoluted layer and pooling layer.
 model.add(Conv2D(64, (4, 4), activation='relu'))
-model.add(MaxPooling2D(pool_size=(3, 3)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
 #Making of the fully connected layer.
 model.add(Flatten())
 #Adding the first hidden layer.
@@ -44,6 +46,7 @@ model.add(Dropout(0.3))
 #Adding second hidden layer.
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
+
 #Using softmax function because we need probabilistic output for each class.
 model.add(Dense(num_classes, activation='softmax'))
 #compiling of the model.
