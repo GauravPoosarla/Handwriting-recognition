@@ -9,7 +9,7 @@ from keras.layers import Dropout
 from keras.layers import Flatten
 from keras.losses import categorical_crossentropy
 
-# the data, split between train and test sets
+#Loading the dataset and splitting it into test and train.
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 #reshaping the image in the form it is there.
