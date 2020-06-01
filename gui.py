@@ -42,7 +42,7 @@ root.resizable(0,0)
 cv = Canvas(root, width=width, height=height, bg='white')
 cv.pack()
 
-# PIL create an empty image and draw object to draw on memory.
+# PIL creates an empty image .
 image1 = PIL.Image.new("RGB", (width, height), white)
 draw = ImageDraw.Draw(image1)
 
